@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+
+ background-image: linear-gradient(to right, red , yellow);
+
+}
+.menu ul{
+    text-align: center;
+}
+.menu ul li {
+	margin-left: -4px;
+    display: inline-block;
+	
+}
+.menu ul li:last-child a{
+    border-right: 1px solid red;
+}
+
+.menu .main .li{
+    position: relative;
+}
+.menu .main .li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 95%;
+    width: 0%;
+    height: 3px;
+    background-color:#4df2c1;
+   transition: .5s;
+}
+
+.menu .main .li:hover::before{
+
+    width: 100%;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    display: inline-block;
+	padding: 20px 30px;
+	border-left: 1px solid red;
+    transition: 0.5s;
+    color: white;
+}
+.menu ul li:hover > a{
+   background-image: linear-gradient(to right, red , yellow);
+}
+
+/* dropdown menu */
+
+.menu ul li{
+    position: relative;
+}
+
+.menu ul li ul {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 300px;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    border-top: 3px solid rgb(255, 255, 255);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transform: scaleY(0);
+    transform-origin: top center;
+}
+.menu ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1);
+} 
+.menu ul li ul li{
+    display: block;
+    margin-left:-4px;
+}
+.menu ul li ul li a{
+    display: block;
+    margin-left: 4px;
+    border: none;
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+
+
+.menu ul li ul li:last-child a{
+    border: none;
+}
+/* theard menu */
+
+.menu ul li ul li{
+    position: relative;
+}
+
+
+
+.menu ul li ul li .therd {
+	position: absolute;
+	left: 101%;
+	top: -5px;
+	border-top: 3px solid #ff9e9e;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transform: scaleY(0);
+    transform-origin: top center;
+}
+
+
+.menu ul li ul li:hover .therd{
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/* all transform start */
+
+.main-trnasform{
+    width: 1000px;
+    text-align: center;
+    margin: auto;
+    padding: 50px;
+    border: 3px dotted;
+    margin-top: 425px;
+    margin-bottom: 50px;
+}
+
+.w{
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(to right, red , yellow);
+    display: inline-block;
+    margin-left: 30px;
+
+}
+
+.div1{
+    transform: translate(-10px,70px);
+}
+.div2{
+    transform: rotate(65deg);
+}
+.div3{
+    transform: skew(1deg,-47deg);
+}
+.div4{
+
+    transform: scale(1.2);
+}
+
+.div6{
+    transition: 0.5s;
+}
+.div7{
+    transition: 0.5s;
+}
+.div8{
+    transition: 0.5s;
+}
+.div9{
+    transition: 0.5s;
+}
+
+
+.div6:hover{
+    transform: translate(-10px,70px);
+    cursor: pointer;
+}
+.div7:hover{
+    transform: rotate(65deg);
+    cursor: pointer;
+}
+.div8:hover{
+    transform: skew(1deg,-47deg);
+    cursor: pointer;
+}
+.div9:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* img */
+
+.wrap-div{
+    width: 500px;
+    margin: auto;
+    padding: 90px;
+    border: 3px dashed;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.wrap-div img{
+    max-width: 100%;
+    cursor: wait;
+    transition: .5s;    
+
+}
+
+.wrap-div img:hover{
+    transform: rotate(360deg) scale(1.3);
+}
